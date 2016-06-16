@@ -1,4 +1,5 @@
 import sys
+import time
 
 def selectionSort(a):
 
@@ -35,4 +36,6 @@ tests.append([1,1,1,1,1,1])
 tests.append([])
 
 for test in tests:
+    t = time.process_time()
     assert selectionSort(test) == sorted(test)
+    print(time.process_time() - t)
